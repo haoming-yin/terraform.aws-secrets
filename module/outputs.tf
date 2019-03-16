@@ -1,5 +1,5 @@
 output "db_password" {
-  value = "${data.db_password.value}"
+  value = "${data.aws_ssm_parameter.db_password.value}"
 }
 
 output "key_pair" {
