@@ -18,3 +18,9 @@ variable "db_password" {}
 variable "cloudflare_email" {}
 
 variable "cloudflare_key" {}
+
+variable "smtp_user" {}
+
+variable "smtp_password" {}
+
+variable "smtp_from" {}

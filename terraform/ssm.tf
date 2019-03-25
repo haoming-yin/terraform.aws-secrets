@@ -21,3 +21,27 @@ resource "aws_ssm_parameter" "cloudflare_key" {
 
   tags = "${merge(map("Name" ,"/cloudflare/key"),var.tags)}"
 }
+
+resource "aws_ssm_parameter" "smtp_user" {
+  name  = "/smtp/user"
+  type  = "SecureString"
+  value = "${var.smtp_user}"
+
+  tags = "${merge(map("Name" ,"/smtp/user"),var.tags)}"
+}
+
+resource "aws_ssm_parameter" "smtp_password" {
+  name  = "/smtp/password"
+  type  = "SecureString"
+  value = "${var.smtp_password}"
+
+  tags = "${merge(map("Name" ,"/smtp/password"),var.tags)}"
+}
+
+resource "aws_ssm_parameter" "smtp_from" {
+  name  = "/smtp/from"
+  type  = "SecureString"
+  value = "${var.smtp_from}"
+
+  tags = "${merge(map("Name" ,"/smtp/from"),var.tags)}"
+}
